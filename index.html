@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>  
+    body {
+        background-image: url('IMG/roller-skating-unicorn.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    p {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 0px;
+        color: white;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        font-size: 80%;
+    }
+    .birthday-countdown {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background: rgba(198, 91, 161, 0.6);
+        border-radius: 20px;
+        padding: 30px;
+    }
+    .age-counter {
+        color: rgb(226, 226, 226);
+        font-size: 2rem;
+    }
+    
+    @media screen and (max-width: 800px ) {
+        :root {font-size: 10px;}
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="birthday-countdown">
+            <p>Natalia's Birthday is in..</p>
+            <p id="bd-countdown"></p>
+            <p class="age-counter">(Natalia is <span id="bd-countup"></span>)</p>
+        </div>
+    </div>
+    
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 1, 2022 00:00:00").getTime();
+
+// Set the date we're counting up from
+var countUpDate = new Date("Feb 1, 2015 19:22:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+    var age = now -countUpDate;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days1 = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours1 = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes1 = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds1 = Math.floor((distance % (1000 * 60)) / 1000);
+  var years2 = Math.floor(age / (1000 * 60 * 60 * 24 * 365));
+  var days2 = Math.floor((age / (1000 * 60 * 60 * 24 )) % (365)) ;
+  var hours2 = Math.floor((age % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes2 = Math.floor((age % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds2 = Math.floor((age % (1000 * 60)) / 1000);
+    
+  // Output the result in an element
+  document.getElementById("bd-countdown").innerHTML = days1 + "d " + hours1 + "h "
+  + minutes1 + "m " + seconds1 + "s ";
+    
+    document.getElementById("bd-countup").innerHTML = years2 + "y " + days2 + "d " + hours2 + "h "
+  + minutes2 + "m " + seconds2 + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("bd-countdown").innerHTML = "Happy Birthday!";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
