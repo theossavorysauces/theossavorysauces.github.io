@@ -2,55 +2,427 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theo's Savory Sauces</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
 <style>
     
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
     
+    body {
+        background:#422015;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Averia Serif Libre', cursive;
+        font-weight: 800;
         color: #E9A600;
+        text-align: center;
+        line-height: 1.5;
+    }
+    
+    h1, h2, h3 {
         -webkit-text-stroke: 1px black;
         text-stroke: 1px black;
-        text-align: center;
         filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.5));
+        padding-bottom: 30px;
+        padding-top: 50px;
     }
+    
+    h4, h5, h6 {
+        color:#471200;
+    }
+    
+    .no-outline {
+        -webkit-text-stroke:0;
+        text-stroke: 0;
+        filter: none;
+        color:#471200;
+    }
+    
     h1 {font-size: 5rem;
     }
-    h2 {font-size: 3rem;}
-    h3 {font-size: 2rem;}
-    h4 {font-size: 1.7rem;}
-    h5 {font-size: 1.4rem;}
+    h2 {font-size: 4rem;}
+    h3 {font-size: 3rem;}
+    h4 {font-size: 1.7rem;padding: 30px;}
+    h5 {font-size: 1.5rem;}
     h6 {font-size: 1rem;}
-
-    body {
-        background-image: url('IMG/theos-savory-sauces-bbq-artisan-sauces.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+    
     p {
-      text-align: center;
-      font-size: 3rem;
-      margin-top: 0px;
+        font-size: 1.3rem;
+        font-family: 'Alice', serif;
+        color: black;
+    }
+    
+    a,a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    li {
+        font-family: 'Alice', serif;
+        color: white;
+        font-size:1.2rem;
+        max-width:700px;
+        margin-left: 50px;
     }
     .container {
         justify-content: center;
         align-items: center;
     }
     
+    section {
+        padding-top:30px;
+        padding-bottom:50px;
+    }
+    
+    section#header {
+        background-image: url('IMG/theos-savory-sauces-bbq-artisan-sauces.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: fit-content;
+    }
+    
+    section#ingredients {
+        height: fit-content;
+    }
+    
+    section#reviews {
+        background-image: url('IMG/theos-award-winning-sauce-chicken-wings.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: fit-content;
+    }
+    
+    #reviews p {color: white;}
+    
+    section#sweetsassy {
+        background-image: url('IMG/Theos-sweet-and-sassy-sauce-honey-glaze.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: fit-content;
+        
+    }
+    
+    #savor h4 {
+        color:#FFD288;
+        font-weight: 200;
+    }
+    
+    section#wheretobuy {
+        background-image: url('IMG/where-to-buy-theos-artisan-local-bbq-sauce2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    #wheretobuy .box {
+        background:rgba(233,166,0,0.8);
+        max-width:600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    #wheretobuy .box p {
+        text-align: center;
+    }
+    .ingredients {
+        width: 100px;
+    }
+    
+    #awards h2 {
+        text-align: left;
+    }
+    
+    img {
+        border-radius: 20px;
+        margin: 30px;
+    }
+    
+    #savor img {
+        width: 200px;
+
+    }
+    
+    #family img {
+        height: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #wholesaler {
+        background: #9E4E19;
+    }
+    
+    .form-label {
+        color: #E9A600;
+        font-family: 'Alice', serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+    
+    form {
+        margin: 0 auto;
+        max-width: 170px;
+    }
+    
+    input, textarea {
+        background: #FFD288;
+        border: 0;
+        border-radius: 5px;
+    }
+    
+    #formSend {
+        margin: 0 auto;
+        display: block;
+        width: 100px;
+        margin-top: 20px;
+        background: #E9A600;
+        border-radius: 5px;
+        border:0;
+        padding: 8px;
+    }
+    
+    footer #logo {
+        width: 200px;
+    }
+    
+    footer, footer a, footer p {
+        color: #FFD288;
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 801px ) {
+        .fullImg {
+            height: 800px;
+        }
+    }
+    
     @media screen and (max-width: 800px ) {
-        :root {font-size: 10px;}
+        
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.1;
+        }
+        :root {font-size: 12px;}
+        .fullImg {
+            height: 700px;
+        }
+        #family img {
+            height: 300px;
+        }
+        
+        #awards h2 {
+            text-align: center;
+        }
+        
+        li {
+            margin-left:0;
+        }
     }
 </style>
 </head>
 <body>
-    <div class="container">
-        <div class="">
-            <h1>Theo's Savory Sauces</h1>
-
-            <h2>Artisan Sauces based on Award-winning Family Recipes since 1991</h2>
+    <section id="header" class="fullImg">
+        <div class="container">
+            <div style="padding-top:10vw">
+                <h1>Theo's Savory Sauces</h1>
+                <h3>Artisan Sauces based on Award-winning Family Recipes since 1991</h3>
+            </div>
         </div>
-    </div>
+    </section>
+    <section style="background:#ECCA92" id="ingredients">
+        <div class="container text-center">
+            <h2>Great Ingredients</h2>
+          <div class="row align-items-center">
+            <div class="col">
+                <img src="IMG/ingredients-icon-vegan-friendly.png" class="ingredients" />
+                <h5>Vegan</h5>
+            </div>
+            <div class="col">
+                <img src="IMG/ingredients-icon-keto-friendly.png" class="ingredients" />
+                <h5>Keto-friendly</h5>
+            </div>
+            <div class="col">
+                <img src="IMG/ingredients-icon-gluten-free.png" class="ingredients" />
+                <h5>Gluten-free</h5>
+            </div>
+            <div class="col">
+                <img src="IMG/ingredients-icon-fat-free.png" class="ingredients" />
+                <h5>Fat-free</h5>
+            </div>
+            <div class="col">
+                <img src="IMG/ingredients-icon-nut-free.png" class="ingredients" />
+                <h5>Nut-free</h5>
+            </div>
+          </div>
+            <br/>
+            <h4>We use simple high-quality, all-natural ingredients that are full of flavor and good for your health.</h4>
+        </div>
+    </section>
+    <section id="reviews" class="fullImg">
+        <div class="container">
+            
+            <h2>Happy Customers</h2>
+            
+            <div>
+                <p>&ldquo;Oh Linda, you are so right. Food is often the common denominator. We use food to help celebrate a birth and mourn a death. We use food to celebrate weddings, Christenings, Bar Mitzvahs and birthdays. Food is often present when negotiating a business deal. And as you said Linda, to learn about diversity. I love what you do with your sauces, which also honors your mom and dad.&rdquo;
+                <br/>&mdash;Paul VanSavage</p>
+
+                <p>&ldquo;You owe it to your taste buds plus Support Local business. It's a win, win. Linda L. Osborne I tried a sauce the other day for the first time. Amazing. Cheers.&rdquo;
+                <br/>&mdash;Jonathan Owen</p>
+
+                <p>&ldquo;It was the best rib experience. Thanks.&rdquo;
+                <br/>&mdash;Borsky Family, Queens NYC</p>
+
+                <p>&ldquo;Thank you for opening my eyes up to the wonders of soul food!”
+                <br/>&mdash;Zatan Olti</p>
+
+                <p>&ldquo;So happy to have found this page! I had no idea you still make the sweet and sassy sauce to bottle! One of my best memories of my dad is getting Theo&apos;s wings.&rdquo;
+               <br/>&mdash;Tracy</p>
+            </div>
+            
+            <p style="color:#F0BD3F; font-size:1.4rem">Theo&apos;s sauce has been loved by people from all over NYS, USA, France, Canada, Columbia, Honduras, Germany, Africa, Russia, Peru, United Kingdom, Greece and more!</p>
+        
+        </div>
+    </section>
     
+    <section id="sweetsassy" class="fullImg">
+        <h2>Everything&apos;s Just Sweet &amp; Sassy!</h2>
+        
+        <h3 style="color: #FFD288">Sweet &amp; Sassy Sauce:<br/>Honey Glaze with a Zesty Finish</h3>
+    </section>
+    
+    <section style="background:#B26633" id="savor">
+        <div class="container">
+            <h4>Savor the flavor of our award-winning artisan finishing sauces on Theo&apos;s famous wings, chicken, ham, shrimp, meatballs, stir-fry, salad and more!</h4>
+
+            <div class="row align-items-center">
+                <div class="col-6 offset-1 col-sm-5 offset-sm-3 col-sm-6 offset-sm-0 col-lg-3 offset-lg-0">
+                    <img src="IMG/theos-award-winning-chicken-wing-sauce.jpg" />
+                </div>
+                <div class="col-6 offset-1 col-sm-5 offset-sm-3 col-sm-6 offset-sm-0 col-lg-3 offset-lg-0">
+                    <img src="IMG/theos-sauce-burgers-bbq-chicken.jpg" />
+                </div>
+                <div class="col-6 offset-1 col-sm-5 offset-sm-3 col-sm-6 offset-sm-0 col-lg-3 offset-lg-0">
+                    <img src="IMG/theos-savory-sauces-chicken-bbq-honey.jpg" />
+                </div>
+                <div class="col-6 offset-1 col-sm-5 offset-sm-3 col-sm-6 offset-sm-0 col-lg-3 offset-lg-0">
+                    <img src="IMG/salads-meatballs-stirfry-shrimp-artisan-sauce.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background: #422015" id="awards">
+        <div class="container">
+            <h2>Awards &amp; Honorable Mentions</h2>
+                <ul>
+                    <li>MWBE Trailblazer Award - 1999</li>
+                    <li>Broome County Black &amp; Minority Coalition - Minority Business Achievement Award</li>
+                    <li>Delta Achievement Award</li>
+                    <li>1998 Achievement Award</li>
+                    <li>Voted BEST in the Southern Tier by the Press &amp; Sun Bulletin</li>
+                    <li>Readers Choice Award - Best Ribs 1993, 1995, 1998,1999</li>
+                    <li>Readers Choice Award - Best BBQ Chicken 1997, 1999, 1998</li>
+                    <li>Readers Choice Award - Best Wings 1997, 1998, 1999</li>
+                    <li>Readers Choice Award - Best BBQ 2004, 2006</li>
+                    <li>Mayor's Proclamation and Key to the City - Johnson City, New York</li>
+                    <li>Theo's Southern Style Cuisine with a New York Twist!</li>
+                    <li>Award winning for over 10 years for BBQ, Ribs, Chicken and Stylin Wings</li>
+                </ul>
+            <h2>Featured In</h2>
+                <ul>
+                    <li>Theo's featured in 1998 Edition of "Where the Local's Eat" For Best BBO Ribs</li>
+                    <li>African American Regional Cooking Library- The Culinary Institute of America</li>
+                    <li>Taste &amp; Tales of NY's Southern Tier</li>
+                    <li>Faces of the Southern Tier 2006</li>
+                    <li>What's Cooking at Olums - Local TV Show</li>
+                </ul>
+            <h2>Community Activities &amp; Events</h2>
+                <ul>
+                    <li>McGregory BBQ At the Winery in NYS Finger Lake</li>
+                    <li>Oh Taste &amp; See Celebration - Expanded Binghamton's First Friday activities to Johnson City by featuring the diverse cuisine of the south combined with displays of local artists: Kathye Edwina Arrington (African American) and Elbert White (Native American)</li>
+                    <li>Tioga County Council of the Arts Festival - Hickory Smoked Blues</li>
+                    <li>Corning NY Arts Festival - Corning Museum of Glass</li>
+                </ul>
+        </div>
+    </section>
+    
+    <section id="family" style="background:#ECCA92">
+        <div class="container">
+            <h3 class="no-outline">It&apos;s a Family Affair</h3>
+            <div class="row">
+                <div class="col-12 offset-0 col-md-5 offset-md-1 col-xl-4 offset-lg-0">
+                    <img src="IMG/theos-savory-sauces-4.jpg" />
+                    <h4>John Osborne &amp; Linda Felton</h4>
+                </div>
+                <div class="col-12 offset-0 col-md-5 offset-md-1 col-xl-4 offset-lg-0">
+                    <img src="IMG/theos-savory-sauces-3.jpg" />
+                    <h4>Barbara Felton</h4>
+                </div>
+                <div class="col-12 offset-0 col-md-5 offset-md-1 col-xl-4 offset-lg-0">
+                    <img src="IMG/theos-savory-sauces-2.jpg" />
+                    <h4>Ted Felton</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="wheretobuy">
+        <div class="container">
+            <h2>Where to Buy</h2>
+
+            <p>Theo&apos;s Sweet &amp; Sassy Sauce is currently available at Tom&apos;s Gift Shop Binghamton, NY (southern tier region) and Simply Positive Livonia, NY (Western region of NY.) More locations are coming soon!</p>
+
+            <div class="box">
+                <h4>Tom&apos; Coffee &amp; Gifts</h4>
+                <p><a href="http://tomscoffeecardsandgifts.com" target="_blank">184 Main St, Binghamton, NY 13905<br/>
+                tomscoffeecardsandgifts.com</a>
+
+                <h4>Simply Positive</h4>
+                <p><a href="http://simplypositive711.com" target="_blank">23 Main St, Livonia, NY 14487<br/>
+                simplypositive711.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="wholesaler">
+        
+        <h2>Wholesale Signup &amp; Direct Order</h2>
+        <form action="https://getform.io/f/95d90643-d580-40a5-a124-22448aa2617b" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label><br/>
+            <input type="text" name="name"><br/>
+        </div>
+         <div class="mb-3">
+            <label for="email" class="form-label">Email address</label><br/>
+            <input type="email" name="email"><br/>
+        </div>
+         <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label><br/>
+            <input type="phone" name="phone"><br/>
+        </div>
+         <div class="mb-3">
+            <label for="orderQTY" class="form-label">Order Quantity (minimum: 6 bottles)</label>
+            <input type="text" name="orderQTY"><br/>
+        </div>
+            <label for="message" class="form-label">Message</label><br/>
+            <textarea type="text" name="message" rows="3"></textarea><br/>
+
+    <!-- add hidden Honeypot input to prevent spams -->
+    <input type="hidden" name="_gotcha" style="display:none !important">
+    <button type="submit" id="formSend">Send</button>
+</form>
+    </section>
+    
+<footer>
+    <img src="IMG/Theos-logo-smaller.png" id="logo"/>
+    <h6>Connect &amp; Follow</h6>
+    <p><a href="https://www.facebook.com/SweetandSassySistas/">Facebook</a> | <a href="https://www.instagram.com/theossweetsassycuisine/">Instagram</a></p>
+
+<p>&copy; 2022 Theo&apos; Savory Sauces, Binghamton N.Y.<br/>
+Crafted by <a href="http://blackfernmedia.com">Blackfern Media</a></p>
+</footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </body>
 </html>
