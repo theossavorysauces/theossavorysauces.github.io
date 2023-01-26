@@ -235,14 +235,15 @@
     <section id="wholesaler">
         
         <h2>Wholesale Signup &amp; Direct Order</h2>
-        <form accept-charset="UTF-8" action="https://www.formbackend.com/f/6bbd77f4835261ec" method="POST">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <form action="https://formbold.com/s/oaP24" method="POST">
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label><br/>
-            <input type="text" name="name"><br/>
+            <label for="name" class="form-label">Name*</label><br/>
+            <input type="text" name="name" required><br/>
         </div>
          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label><br/>
-            <input type="email" name="email"><br/>
+            <label for="email" class="form-label">Email address*</label><br/>
+            <input type="email" name="email" required><br/>
         </div>
          <div class="mb-3">
             <label for="phone" class="form-label">Phone</label><br/>
@@ -252,8 +253,8 @@
             <label for="orderQTY" class="form-label">Order Quantity (minimum: 6 bottles)</label>
             <input type="text" name="orderQTY"><br/>
         </div>
-            <label for="message" class="form-label">Message</label><br/>
-            <textarea type="text" name="message" rows="3"></textarea><br/>
+            <label for="message" class="form-label">Message*</label><br/>
+            <textarea type="text" name="message" rows="3" required></textarea><br/>
 
     <!-- add hidden Honeypot input to prevent spams -->
     <input type="hidden" name="_gotcha" style="display:none !important">
