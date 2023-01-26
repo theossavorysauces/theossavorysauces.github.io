@@ -2,89 +2,13 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="At Theo&apos;s Brands, we take great pride in continuing the time-honored tradition of crafting the perfect sauce. Passed down through generations, our secret recipe has been refined to bring you a truly authentic and delicious experience. Each bottle is made with love and care by our family, using only the freshest and highest quality ingredients. We believe that good food brings people together and our sauce is the perfect addition to any family gathering or backyard BBQ. Taste the tradition in every bite and make memories that will last a lifetime with Theo’s Artisan Sauces." >
 <title>Theo's Savory Sauces</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
+<link href="CSS/styles.css" rel="stylesheet" >
+    
 <style>
-    
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
-    
-    html,body {
-        background:#422015;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Averia Serif Libre', cursive;
-        font-weight: 800;
-        color: #E9A600;
-        text-align: center;
-        line-height: 1.5;
-    }
-    
-    h1, h2, h3 {
-        -webkit-text-stroke: 1px black;
-        text-stroke: 1px black;
-        filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.5));
-        padding-bottom: 30px;
-        padding-top: 50px;
-    }
-    
-    h4, h5, h6 {
-        color:#471200;
-    }
-    
-    .no-outline {
-        -webkit-text-stroke:0;
-        text-stroke: 0;
-        filter: none;
-        color:#471200;
-    }
-    
-    h1 {font-size: 5rem;
-    }
-    h2 {font-size: 4rem;}
-    h3 {font-size: 3rem;}
-    h4 {font-size: 1.7rem;padding: 30px;}
-    h5 {font-size: 1.5rem;}
-    h6 {font-size: 1rem;}
-    
-    p {
-        font-size: 1.3rem;
-        font-family: 'Alice', serif;
-        color: black;
-    }
-    
-    a {
-        color: #422015;
-        text-decoration: underline;
-    }
-    a:hover {
-        color:#B26633;
-        text-decoration: underline;
-    }
-    
-    footer a:hover {
-        color: #F0BD3F;
-    }
-    
-    li {
-        font-family: 'Alice', serif;
-        color: white;
-        font-size:1.2rem;
-        max-width:700px;
-        margin-left: 50px;
-    }
-    .container {
-        justify-content: center;
-        align-items: center;
-    }
-    
-    section {
-        padding-top:30px;
-        padding-bottom:50px;
-    }
-    
     section#header {
         background-image: url('IMG/theos-savory-sauces-bbq-artisan-sauces.jpg');
         background-size: cover;
@@ -95,7 +19,6 @@
     section#ingredients {
         height: fit-content;
     }
-    
     section#reviews {
         background-image: url('IMG/theos-award-winning-sauce-chicken-wings.jpg');
         background-size: cover;
@@ -112,18 +35,15 @@
         height: fit-content;
         
     }
-    
     #savor h4 {
         color:#FFD288;
         font-weight: 200;
     }
-    
     section#wheretobuy {
         background-image: url('IMG/where-to-buy-theos-artisan-local-bbq-sauce2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
-    
     #wheretobuy .box {
         background:rgba(233,166,0,0.8);
         max-width:600px;
@@ -133,98 +53,16 @@
     #wheretobuy .box p {
         text-align: center;
     }
-    .ingredients {
-        width: 100px;
-    }
-    
-    #awards h2 {
-        text-align: left;
-    }
-    
-    img {
-        border-radius: 20px;
-        margin: 30px;
-    }
-    
-    #savor img {
-        width: 200px;
-
-    }
-    
+    .ingredients {width: 100px;}
+    #awards h2 {text-align: left;}
+    #savor img {width: 200px;}
     #family img {
         height: 400px;
         display: block;
         margin: 0 auto;
     }
-    
     #wholesaler {
         background: #9E4E19;
-    }
-    
-    .form-label {
-        color: #E9A600;
-        font-family: 'Alice', serif;
-        font-weight: 500;
-        font-size: 1.1rem;
-    }
-    
-    form {
-        margin: 0 auto;
-        max-width: 170px;
-    }
-    
-    input, textarea {
-        background: #FFD288;
-        border: 0;
-        border-radius: 5px;
-    }
-    
-    #formSend {
-        margin: 0 auto;
-        display: block;
-        width: 100px;
-        margin-top: 20px;
-        background: #E9A600;
-        border-radius: 5px;
-        border:0;
-        padding: 8px;
-    }
-    
-    footer #logo {
-        width: 200px;
-    }
-    
-    footer, footer a, footer p {
-        color: #FFD288;
-        text-align: center;
-    }
-    
-    @media screen and (min-width: 801px ) {
-        .fullImg {
-            height: 800px;
-        }
-    }
-    
-    @media screen and (max-width: 800px ) {
-        
-        h1, h2, h3, h4, h5, h6 {
-            line-height: 1.1;
-        }
-        :root {font-size: 12px;}
-        .fullImg {
-            height: 700px;
-        }
-        #family img {
-            height: 300px;
-        }
-        
-        #awards h2 {
-            text-align: center;
-        }
-        
-        li {
-            margin-left:0;
-        }
     }
 </style>
 </head>
@@ -281,7 +119,7 @@
                 <p>&ldquo;It was the best rib experience. Thanks.&rdquo;
                 <br/>&mdash;Borsky Family, Queens NYC</p>
 
-                <p>&ldquo;Thank you for opening my eyes up to the wonders of soul food!”
+                <p>&ldquo;Thank you for opening my eyes up to the wonders of soul food!&rdquo;
                 <br/>&mdash;Zatan Olti</p>
 
                 <p>&ldquo;So happy to have found this page! I had no idea you still make the sweet and sassy sauce to bottle! One of my best memories of my dad is getting Theo&apos;s wings.&rdquo;
@@ -426,7 +264,7 @@
     <h3 style="font-size:2rem;line-height: 1;">Connect &amp; Follow</h3>
     <p><a href="https://www.facebook.com/SweetandSassySistas/">Facebook</a> | <a href="https://www.instagram.com/theossweetsassycuisine/">Instagram</a></p>
 
-<p>&copy; 2022 Theo&apos; Savory Sauces, Binghamton N.Y.<br/>
+<p>&copy; 2023 Theo&apos; Savory Sauces, Binghamton N.Y.<br/>
 Crafted by <a href="http://blackfernmedia.com">Blackfern Media</a></p>
 </footer>
     

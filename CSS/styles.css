@@ -1,0 +1,152 @@
+   
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+    
+    html,body {
+        background:#422015;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Averia Serif Libre', cursive;
+        font-weight: 800;
+        color: #E9A600;
+        text-align: center;
+        line-height: 1.5;
+    }
+    
+    h1, h2, h3 {
+        -webkit-text-stroke: 1px black;
+        text-stroke: 1px black;
+        filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.5));
+        padding-bottom: 30px;
+        padding-top: 50px;
+    }
+    
+    h4, h5, h6 {
+        color:#471200;
+    }
+
+
+    
+    .no-outline {
+        -webkit-text-stroke:0;
+        text-stroke: 0;
+        filter: none;
+        color:#471200;
+    }
+    
+    h1 {font-size: 4rem;
+    }
+    h2 {font-size: 3.5rem;}
+    h3 {font-size: 2.5rem;}
+    h4 {font-size: 1.7rem;padding: 30px;}
+    h5 {font-size: 1.5rem;}
+    h6 {font-size: 1rem;}
+    
+    p {
+        font-size: 1.5rem;
+        font-family: 'Alice', serif;
+        color: black;
+    }
+    
+    a {
+        color: #422015;
+        text-decoration: underline;
+    }
+    a:hover {
+        color:#B26633;
+        text-decoration: underline;
+    }
+    
+    footer a:hover {
+        color: #F0BD3F;
+    }
+    
+    li {
+        font-family: 'Alice', serif;
+        color: white;
+        font-size:1.2rem;
+        max-width:700px;
+        margin-left: 50px;
+    }
+    .container {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section {
+        padding-top:30px;
+        padding-bottom:50px;
+    }
+    
+    
+    img {
+        border-radius: 20px;
+        margin: 30px;
+    }
+    .form-label {
+        color: #E9A600;
+        font-family: 'Alice', serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+    
+    form {
+        margin: 0 auto;
+        max-width: 170px;
+    }
+    
+    input, textarea {
+        background: #FFD288;
+        border: 0;
+        border-radius: 5px;
+    }
+    
+    #formSend {
+        margin: 0 auto;
+        display: block;
+        width: 100px;
+        margin-top: 20px;
+        background: #E9A600;
+        border-radius: 5px;
+        border:0;
+        padding: 8px;
+    }
+    
+    footer #logo {
+        width: 200px;
+    }
+    
+    footer, footer a, footer p {
+        color: #FFD288;
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 801px ) {
+        .fullImg {
+            height: 800px;
+        }
+    }
+    
+    @media screen and (max-width: 800px ) {
+        
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.1;
+            padding: 20px 0;
+        }
+        :root {font-size: 10px;}
+        .fullImg {
+            height: 700px;
+        }
+        #family img {
+            height: 300px;
+        }
+        
+        #awards h2 {
+            text-align: center;
+        }
+        
+        li {
+            margin-left:0;
+        }
+    }
