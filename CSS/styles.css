@@ -107,13 +107,14 @@ button {
     
     form {
         margin: 0 auto;
-        max-width: 170px;
+        max-width: 300px;
     }
     
     input, textarea {
         background: #FFD288;
         border: 0;
         border-radius: 5px;
+        width: 300px;
     }
     
     #formSend {
